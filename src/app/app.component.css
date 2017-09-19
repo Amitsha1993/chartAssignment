@@ -1,0 +1,17 @@
+.p10{
+	padding:10px;
+}
+.MB0{
+	margin-bottom: 0px !important;
+}
+.MT20{
+	margin-top: 20px;
+}
+.pointer{
+	    cursor: pointer;
+}
+.footer{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}

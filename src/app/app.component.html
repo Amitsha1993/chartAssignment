@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 class="card-panel teal lighten-2">
+    Welcome to {{title}}!
+  </h1>
+  <a class="waves-effect waves-light btn" ><i class="material-icons right">cloud</i>
+  	<input type='file' accept=".csv"  (change)="convertFile(event)" id='fileInput'>
+  </a>
+  
+</div>
+ <div class="MT20">
+	
+	<div class=" container #009688 teal z-depth-5 p10" *ngIf="chartKeyData.length != 0">
+	    <div class="row MB0" >
+			<div class="col s3 center-align pointer #ffffff-text white-text" (click)="getChart(data.name)" *ngFor="let data of chartKeyData">{{data.name}}</div>
+		</div>
+	</div>
+</div>
+
+
+  	<div class="container">
+      <canvas #lineCanvas width="200" height="200" [hidden]="!chartEnable"></canvas>
+      <div class="col s12 center-align MT20" [hidden]="chartEnable" *ngIf="chartKeyData.length != 0">
+      	<i class="material-icons dp48">arrow_upward</i>
+			<h4>Click an option to see chart</h4>
+		</div>
+    </div>
+
+<div class="footer teal lighten-2">
+  <p class="p10 white-text">
+    Submitted By: Amit Sharma
+  </p>
+  
+ </div>
+
